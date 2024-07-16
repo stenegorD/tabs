@@ -1,0 +1,58 @@
+.tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    cursor: pointer;
+    color: $tab-text-color;
+    background: $bg-tab-color;
+    user-select: none;
+    position: relative;
+
+    p {
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+}
+
+.tab:hover {
+    color: $active-tab-text-color;
+    background: $bg-pin-tab-color;
+}
+
+
+.tab.pinned {
+    .pseudo_line {
+        opacity: 0;
+    }
+}
+
+.active {
+    background: $bg-pin-tab-color;
+}
+
+.active::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: $drop-down-color;
+    border-radius: 1px, 1px, 0px, 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.dragging {
+    background: $bg-drag-tab-color;
+    color: $drag-tab-text-color;
+}
+
+.pinned {
+    background: $bg-pin-tab-color;
+}
+
+.pointer_events {
+    pointer-events: none;
+}

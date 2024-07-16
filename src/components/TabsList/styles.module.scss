@@ -1,0 +1,20 @@
+.wrap_tabs {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.wrap_tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.pseudo_line {
+    flex-shrink: 0;
+    width: 1px;
+    height: 16px;
+    margin: 0px 2px;
+    background: $line-color;
+}

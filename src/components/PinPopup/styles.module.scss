@@ -1,0 +1,36 @@
+.popup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    cursor: pointer;
+    color: $tab-text-color;
+    background: $bg-color;
+    user-select: none;
+    border: 1px solid $line-color;
+    box-shadow: 0px 16px 30px 0px $shadow-color;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    animation: fade 300ms ease forwards;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+
+    svg {
+        flex-shrink: 0;
+    }
+}
+
+@keyframes fade {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,58 @@
+.more_tabs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    color: $tab-text-color;
+    background: $bg-color;
+    user-select: none;
+    border: 1px solid $line-color;
+    box-shadow: 0px 16px 30px 0px $shadow-color;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    animation: fade 300ms ease forwards;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        list-style: none;
+        padding: 10px;
+        margin: 0;
+        border-bottom: 1px solid $line-color;
+
+        svg {
+            flex-shrink: 0;
+        }
+
+        p {
+            overflow: hidden;
+            flex: 1 1 auto;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    li:hover {
+        background: $bg-pin-tab-color;
+    }
+
+}
+
+@keyframes fade {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

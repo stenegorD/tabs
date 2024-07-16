@@ -1,0 +1,36 @@
+.wrap_tabs_list{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.shadow {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.shadow_left:before {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: linear-gradient(90deg, #FFF 10.35%, rgba(255, 255, 255, 0.00) 99.72%);
+}
+
+.shadow_right:after {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background: linear-gradient(270deg, #FFF 10.35%, rgba(255, 255, 255, 0.00) 99.72%);
+}
